@@ -34,7 +34,9 @@ except KeyError:
     "nom_competence_3": "", 
     "bonus_competence_3": 0, 
     "nom_competence_4": "", 
-    "bonus_competence_4": 0, 
+    "bonus_competence_4": 0,
+    "nom_competence_5": "", 
+    "bonus_competence_5": 0,
     "nom_don_1": "", 
     "cout_don_1": 0, 
     "nom_don_2": "", 
@@ -101,6 +103,9 @@ else:
 
     st.session_state["nouveau_perso"]["nom_competence_4"]=(st.sidebar.text_input("Nom compétence 4", max_chars=None, key=11, type="default", help=None, autocomplete=None, on_change=None, placeholder="compétence 4", disabled=False))
     st.session_state["nouveau_perso"]["bonus_competence_4"]=int(st.sidebar.text_input("Bonus compétence 4", value=0, max_chars=None, key=12, type="default", help=None, autocomplete=None, on_change=None, placeholder=None, disabled=False))
+
+    st.session_state["nouveau_perso"]["nom_competence_5"]=(st.sidebar.text_input("Nom compétence 5", max_chars=None, key=11, type="default", help=None, autocomplete=None, on_change=None, placeholder="compétence 5", disabled=False))
+    st.session_state["nouveau_perso"]["bonus_competence_5"]=int(st.sidebar.text_input("Bonus compétence 5", value=0, max_chars=None, key=12, type="default", help=None, autocomplete=None, on_change=None, placeholder=None, disabled=False))
 
     #dons
     st.sidebar.write("## Dons") 
@@ -173,6 +178,9 @@ with left_column:
         competences_tab+="| "+str(st.session_state["data_perso"]["nom_competence_3"])+" | "+str(st.session_state["data_perso"]["bonus_competence_3"])+" |\n"
     if(st.session_state["data_perso"]["nom_competence_4"]!=''):
         competences_tab+="| "+str(st.session_state["data_perso"]["nom_competence_4"])+" | "+str(st.session_state["data_perso"]["bonus_competence_4"])+" |\n"
+    if(st.session_state["data_perso"]["nom_competence_5"]!=''):
+        competences_tab+="| "+str(st.session_state["data_perso"]["nom_competence_5"])+" | "+str(st.session_state["data_perso"]["bonus_competence_5"])+" |\n"
+    
     st.write(competences_tab)
 
     dons_tab="| Don | Coût |\n"
