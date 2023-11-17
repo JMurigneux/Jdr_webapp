@@ -104,8 +104,8 @@ else:
     st.session_state["nouveau_perso"]["nom_competence_4"]=(st.sidebar.text_input("Nom compétence 4", max_chars=None, key=11, type="default", help=None, autocomplete=None, on_change=None, placeholder="compétence 4", disabled=False))
     st.session_state["nouveau_perso"]["bonus_competence_4"]=int(st.sidebar.text_input("Bonus compétence 4", value=0, max_chars=None, key=12, type="default", help=None, autocomplete=None, on_change=None, placeholder=None, disabled=False))
 
-    st.session_state["nouveau_perso"]["nom_competence_5"]=(st.sidebar.text_input("Nom compétence 5", max_chars=None, key=11, type="default", help=None, autocomplete=None, on_change=None, placeholder="compétence 5", disabled=False))
-    st.session_state["nouveau_perso"]["bonus_competence_5"]=int(st.sidebar.text_input("Bonus compétence 5", value=0, max_chars=None, key=12, type="default", help=None, autocomplete=None, on_change=None, placeholder=None, disabled=False))
+    st.session_state["nouveau_perso"]["nom_competence_5"]=(st.sidebar.text_input("Nom compétence 5", max_chars=None, key=27, type="default", help=None, autocomplete=None, on_change=None, placeholder="compétence 5", disabled=False))
+    st.session_state["nouveau_perso"]["bonus_competence_5"]=int(st.sidebar.text_input("Bonus compétence 5", value=0, max_chars=None, key=28, type="default", help=None, autocomplete=None, on_change=None, placeholder=None, disabled=False))
 
     #dons
     st.sidebar.write("## Dons") 
